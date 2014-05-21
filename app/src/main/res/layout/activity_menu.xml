@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_margin="20dp"
+    android:background="@drawable/backrepeat"
+    tools:context="edu.auburn.eng.csse.comp3710.pab0005.scrollingshooter.app.GameMenu">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="#ffffff"
+        android:textSize="45sp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:text="@string/app_name"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleTextView">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_centerHorizontal="true"
+            android:layout_width="fill_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+
+            android:text="@string/start_button"/>
+
+        <Button
+            android:id="@+id/instructionsButton"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/instructions_button"/>
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_margin="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="@string/about_button"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

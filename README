@@ -1,0 +1,14 @@
+This is a 2-D game for Android 4.0 and greater. The game will be controlled by the player dragging their finger around the screen to move the plane, which will shoot automatically. Enemy planes will fly in from the top of the screen. Shooting an enemy plane will gain the player 100 points. Running into an enemy plane will cost the player one life; the player starts with 3 lives.
+
+The art assets for this game were found in the GameMaker Studio "Scrolling Shooter" demo.
+
+Future changes:
+-Change the theme of the game from propeller planes to spaceships
+-Add sound effects
+-Further refine enemy plane destruction sequence (add explosion effects)
+-Add more enemy types
+-Add new weapon types for the player along with randomly spawning weapon upgrade pickups
+
+
+Contact Info:
+email: Tony.Bernhardt@gmail.com

@@ -66,10 +66,8 @@ public class GameBoard extends View {
     }
 
     private boolean inBounds(Actor actor) {
-        if ((actor.getX() + actor.getSize() / 2) >= 0 && (actor.getX() - actor.getSize() / 2) <= getWidth() &&
-                (actor.getY() + actor.getSize() / 2) >= 0 && (actor.getY() - actor.getSize() / 2) <= getHeight())
-            return true;
-        return false;
+        return (actor.getX() + actor.getSize() / 2) >= 0 && (actor.getX() - actor.getSize() / 2) <= getWidth() &&
+                (actor.getY() + actor.getSize() / 2) >= 0 && (actor.getY() - actor.getSize() / 2) <= getHeight();
     }
 
 }

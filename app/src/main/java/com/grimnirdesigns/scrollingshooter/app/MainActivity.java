@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
             }
 
             // Update player bullets
-            for (UpBullet bullet : mPlayerPlane.getBullets())
+            for (PlayerBullet bullet : mPlayerPlane.getBullets())
                 bullet.update();
 
             // Update player
@@ -153,11 +153,11 @@ public class MainActivity extends Activity {
             }
             planesToRemove.clear();
 
-            ArrayList<UpBullet> bulletsToRemove = new ArrayList<UpBullet>();
+            ArrayList<PlayerBullet> bulletsToRemove = new ArrayList<PlayerBullet>();
 
             // COLLISION CHECKS
-            ArrayList<UpBullet> playerBullets = mPlayerPlane.getBullets();
-            for (UpBullet bullet : playerBullets) {
+            ArrayList<PlayerBullet> playerBullets = mPlayerPlane.getBullets();
+            for (PlayerBullet bullet : playerBullets) {
                 for (Plane badPlane : mEnemyPlanes) {
                     if (bullet.getBounds().intersect(badPlane.getBounds())) {
                         planesToRemove.add(badPlane);
@@ -181,7 +181,7 @@ public class MainActivity extends Activity {
                 mEnemyPlanes.remove(plane);
             }
             planesToRemove.clear();
-            for (UpBullet bullet : bulletsToRemove) {
+            for (PlayerBullet bullet : bulletsToRemove) {
                 playerBullets.remove(bullet);
             }
             bulletsToRemove.clear();

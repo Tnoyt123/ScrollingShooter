@@ -9,9 +9,6 @@ import android.view.View;
 
 import java.util.List;
 
-/**
- * Created by Tony on 4/15/2014.
- */
 public class GameBoard extends View {
 
     private PlayerPlane mPlayerPlane;
@@ -41,7 +38,7 @@ public class GameBoard extends View {
         if (mPlayerPlane != null) {
             mPlayerPlane.draw(canvas);
 
-            for (UpBullet bullet : mPlayerPlane.getBullets())
+            for (PlayerBullet bullet : mPlayerPlane.getBullets())
                 bullet.draw(canvas);
         }
 
@@ -68,6 +65,7 @@ public class GameBoard extends View {
     private boolean inBounds(Actor actor) {
         return (actor.getX() + actor.getSize() / 2) >= 0 && (actor.getX() - actor.getSize() / 2) <= getWidth() &&
                 (actor.getY() + actor.getSize() / 2) >= 0 && (actor.getY() - actor.getSize() / 2) <= getHeight();
+
     }
 
 }

@@ -9,7 +9,7 @@ public class PlayerPlane extends Plane {
 
     private static final int PLAYERPLANE_SIZE = 64;
     private static final int DEFAULT_HEALTH = 3;
-    private ArrayList<UpBullet> mBullets;
+    private ArrayList<PlayerBullet> mBullets;
     private int mPlayerHealth;
     private int mScore = 0;
 
@@ -22,7 +22,7 @@ public class PlayerPlane extends Plane {
 
 
         mPlayerHealth = DEFAULT_HEALTH;
-        mBullets = new ArrayList<UpBullet>();
+        mBullets = new ArrayList<PlayerBullet>();
     }
 
     public int getScore() {
@@ -35,7 +35,7 @@ public class PlayerPlane extends Plane {
 
     @Override
     public void fireWeapon() {
-        UpBullet bullet = new UpBullet(mContext, getX(), getY() - getSize() / 2);
+        PlayerBullet bullet = new PlayerBullet(mContext, getX(), getY() - getSize() / 2);
         mBullets.add(bullet);
     }
 
@@ -47,7 +47,7 @@ public class PlayerPlane extends Plane {
         mPlayerHealth--;
     }
 
-    public ArrayList<UpBullet> getBullets() {
+    public ArrayList<PlayerBullet> getBullets() {
         return mBullets;
     }
 }
